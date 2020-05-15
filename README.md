@@ -1,2 +1,0 @@
-# Employee-managment-system-
-homwork
