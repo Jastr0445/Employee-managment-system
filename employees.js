@@ -61,11 +61,11 @@ function runSearch() {
 }
 // crud functions //
 
-connection.connect(function(err) {
-  if (err) throw err;
-  console.log("connected as id " + connection.threadId + "\n");
+//connection.connect(function(err) {
+  //if (err) throw err;
+  //console.log("connected as id " + connection.threadId + "\n");
   //createProduct();
-});
+//});
 
 function createEmployee() {
   console.log("Inserting a new employee...\n");
@@ -236,6 +236,7 @@ function employeeSearch() {
       type: "input",
       message: "Which employee are you looking for?"
     })
+    // change console log //
     .then(function(answer) {
       console.log(answer.song);
       connection.query("SELECT * FROM employee WHERE ?", { employee: answer.employee }, function(err, res) {
@@ -245,9 +246,9 @@ function employeeSearch() {
             " || title: " +
             res[0].song +
             " || manager: " +
-            res[0].artist +
+            res[0].name +
             " || department: " +
-            res[0].year
+            res[0].department
         );
         runSearch();
       });
@@ -281,5 +282,5 @@ function getAllEmployees() {
 
         runSearch();
       });
-  
+   
 }
