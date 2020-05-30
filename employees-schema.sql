@@ -27,7 +27,7 @@ CREATE TABLE department (
   id INT auto_increment PRIMARY KEY,
   NAME VARCHAR(30) UNIQUE NOT NULL,
 );
-
+ 
 
 
 
